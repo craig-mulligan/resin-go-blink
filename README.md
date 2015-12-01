@@ -2,6 +2,8 @@
 
 This is a simple LED flashing example. It uses [gobot](http://gobot.io/) to interact with the GPIO.
 
+![blinky-gif](/img/blink.gif)
+
 This project contains examples of how to use Resin Golang images on devices supported by [resin.io][resin-link]. All details about Resin Golang images can be found [here][base-images].
 
 To get this project up and running, you will need to signup for a resin.io account [here][signup-page] and set up a device, have a look at our [Getting Started tutorial][gettingStarted-link]. Once you are set up with resin.io, you will need to clone this repo locally:
