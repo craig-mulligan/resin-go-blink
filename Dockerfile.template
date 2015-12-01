@@ -1,0 +1,18 @@
+# base-image for golang on any machine using a template var
+FROM resin/%%RESIN_MACHINE_NAME%%-golang:latest
+
+# enable systemd
+ENV INITSYSTEM on
+
+RUN go get -d -u github.com/hybridgroup/gobot/...
+
+RUN mkdir /go/src/blink
+
+COPY blink.go /go/src/blink/
+
+RUN go install blink
+
+COPY start.sh /
+
+# run start.sh on start
+CMD ["bash", "/start.sh"]
